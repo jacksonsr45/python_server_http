@@ -1,6 +1,7 @@
 import os
 try:
-    from SimpleHTTPServer import SimpleHTTPReqquestHandler as SimpleHTTPReqquestHandler
+    from SimpleHTTPServer import SimpleHTTPReqquestHandler \
+                            as SimpleHTTPReqquestHandler
     from SocketServer import TCPServer as Server
 except ImportError:
     from http.server import SimpleHTTPRequestHandler as Handler
