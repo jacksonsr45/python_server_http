@@ -12,12 +12,15 @@ except ImportError:
 #Read port selected by the cloud for our application
 PORT = int(os.getenv('PORT', 8000))
 
-#path defoult from BASE_DIR of system 
-path = '/server'
-BASER_DIR = os.path.basename(path)
+#path defoult from BASE_DIR of system
+folder = 'static'
+path = 'server'
+value = os.path.basename(path)
+BASER_DIR = """{}/{}""".format(path, folder)
+
 
 #Change current directory
-os.chdir(BASER_DIR+'/static')
+os.chdir(BASER_DIR)
 httpd = Server(("", PORT), Handler)
 try:
     print("Start serving at port %i" % PORT)
