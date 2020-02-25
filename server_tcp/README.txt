@@ -1,1 +1,0 @@
-This is from estuding by connection in TCP base connect
